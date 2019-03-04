@@ -24,4 +24,11 @@ export class NewsService {
   addNew(data) {
     this.db.list('news').push(data)
   }
+  getNew(id) {
+    this.new = this.db.object(`news/${id}`).valueChanges()
+    return this.new;
+  }
+  deleteNew(id) {
+   this.db.list(`news/${id}`).remove()
+  }
 }

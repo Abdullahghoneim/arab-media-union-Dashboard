@@ -1,7 +1,7 @@
 <div  class="mt-5">
   <div class="row">
     <div class="col">
-      <a href="" routerLink="">الرجوع للقائمة الرئيسية</a>
+        <a href="" class="btn btn-link" routerLink=""> <i class="fas fa-arrow-circle-left"></i> الرجوع الي القائمة الرئيسية  </a>
     </div>
     <div class="col float-right text-right">
     <h1> اضافة خبر  </h1>  
@@ -16,7 +16,7 @@
       <label for="body">الخبر</label>
       <textarea name="body"  class="form-control text-right" required [(ngModel)]="new.body" placeholder="تفاصيل الخبر"  cols="10" rows="5"></textarea>
     </div>
-    <div class="form-group mt-5 text-right">
+    <div class="form-group  text-right">
         <label for="src">مصدر صورة الخبر</label>
         <input type="text" id="src" name="src" class="form-control text-right " required [(ngModel)]="new.src"  placeholder="عنوان مصدر صورة الخبر" class="form-control">
       </div>

@@ -1,3 +1,31 @@
-<p>
-  news-details works!
-</p>
+<div dir="rtl" class="mt-4">
+  <div  class="row">
+    <div class="col">
+        <div class="btn-group float-right" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-danger" (click)="deleteNew()" > <i class="fas fa-trash"></i> حذف الخبر</button>
+            <button type="button" class="btn btn-light"> <i class="fas fa-pen"></i> تعديل</button>
+          </div>
+    </div>
+    <div class="col">
+        <a href="" class="btn btn-link" routerLink=""> الرجوع الي القائمة الرئيسية <i class="fas fa-arrow-circle-left"></i> </a>
+    </div>
+  </div>
+  <div dir="rtl" class="card mt-5">
+    <div class="card-header">
+      <h4 class="text-right">تفاصيل الخبر</h4>
+    </div>
+    <div class="card-body p-4 text-right">
+      <h5>العنوان : <span> {{new.title}} </span></h5>
+      <div class="img text-center">
+        <p> <a  class="btn btn-link text-center mt-3" (click)="showImg = ! showImg" > {{ showImg ? 'اخفاء صورة الخبر' : 'عرض صورة الخبر' }} 
+         <br> <span><i class="fas fa-arrow-circle-down"></i></span>
+        </a> </p>
+        <img *ngIf="showImg" [src]="new.src" alt="">
+      </div>
+      <h5 class="mt-5 text-center"> تفاصيل الخبر : </h5>
+      <p class="text-center"> 
+        {{new.body}}
+      </p>
+    </div>
+  </div>
+</div>

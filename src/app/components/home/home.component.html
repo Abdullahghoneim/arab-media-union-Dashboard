@@ -19,7 +19,7 @@
           <tr>
             <th scope="row"> {{i+1}}  </th>
             <td> {{ nw.title }} </td>
-            <button class="btn btn-light details">تفاصيل</button>
+            <button class="btn btn-light details"  [routerLink]="[ '/new-details', nw.key ]">تفاصيل</button>
             </tr>
         </tbody>
       </table>

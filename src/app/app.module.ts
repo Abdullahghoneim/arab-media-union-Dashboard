@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -9,9 +8,12 @@ import { NewsDetailsComponent } from './components/news-details/news-details.com
 import { AddNewComponent } from './components/add-new/add-new.component';
 import {FormsModule} from '@angular/forms'
 
+
 // firebase
 import {AngularFireModule} from '@angular/fire/'
 import {AngularFireDatabaseModule} from '@angular/fire/database';
+
+// services 
 import { NewsService } from './services/News.service';
 
 const firebase = {
@@ -38,7 +40,8 @@ const firebase = {
     AppRoutingModule,
     AngularFireModule.initializeApp(firebase),
     AngularFireDatabaseModule, 
-    FormsModule
+    FormsModule,
+
   ],
   providers: [NewsService],
   bootstrap: [AppComponent]
