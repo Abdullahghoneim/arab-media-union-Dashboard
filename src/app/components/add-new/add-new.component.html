@@ -19,7 +19,7 @@
     <div class="form-group text-right">
       <label for="img">صورة للخبر</label>
       <input type="file" class="form-control" (change)="uploadFile($event)"  >
-      <h1 *ngIf="complate" >تم التحميل</h1>
+      <p class="alert alert-success text-center" *ngIf="complate" >نم رفع الصورة </p>
     </div>
     <input type="submit"  class="btn btn-block btn-info btn-sm">
   </form>

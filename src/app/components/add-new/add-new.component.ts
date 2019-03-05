@@ -26,16 +26,14 @@ export class AddNewComponent implements OnInit {
   
   ) { }
 
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
   addNew(data) {
     this.newsService.addNew(this.lstNew)
     this.router.navigate(['/'])
   }
   uploadFile(event) {   
     const file = event.target.files[0];
-    const filePath = event.target.files[0].name
+    const filePath = `news/${event.target.files[0].name}`
     const fileRef = this.storage.ref(filePath);
     const task = this.storage.upload(filePath, file);
     
