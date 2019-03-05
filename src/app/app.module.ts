@@ -12,6 +12,7 @@ import {FormsModule} from '@angular/forms'
 // firebase
 import {AngularFireModule} from '@angular/fire/'
 import {AngularFireDatabaseModule} from '@angular/fire/database';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 
 // services 
 import { NewsService } from './services/News.service';
@@ -43,7 +44,7 @@ const firebase = {
     AngularFireModule.initializeApp(firebase),
     AngularFireDatabaseModule, 
     FormsModule,
-
+    AngularFireStorageModule
   ],
   providers: [NewsService],
   bootstrap: [AppComponent]

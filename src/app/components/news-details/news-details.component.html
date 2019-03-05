@@ -22,7 +22,7 @@
         <p> <a  class="btn btn-link text-center mt-3" (click)="showImg = ! showImg" > {{ showImg ? 'اخفاء صورة الخبر' : 'عرض صورة الخبر' }} 
          <br> <span><i class="fas fa-arrow-circle-down"></i></span>
         </a> </p>
-        <img *ngIf="showImg" [src]="new.src" alt="">
+        <img *ngIf="showImg" class="img-fluid" [src]="new.src" alt="">
       </div>
       <h5 class="mt-5 text-center"> تفاصيل الخبر : </h5>
       <p class="text-center"> 
