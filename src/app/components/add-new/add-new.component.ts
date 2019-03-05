@@ -17,6 +17,7 @@ export class AddNewComponent implements OnInit {
     body : '', 
     src : ''
   }
+  complate: boolean = false;
   downloadURL: Observable<string>;
   imgPath;
   URL;
@@ -44,9 +45,10 @@ export class AddNewComponent implements OnInit {
         this.downloadURL.subscribe(url => {
           this.URL = url;
           this.lstNew.src = url;
-        } )
+          this.complate = true;
+        })
       })
-   )
+    )
     .subscribe()
   
   }

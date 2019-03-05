@@ -16,10 +16,11 @@
       <label for="body">الخبر</label>
       <textarea name="body"  class="form-control text-right" required [(ngModel)]="lstNew.body" placeholder="تفاصيل الخبر"  cols="10" rows="5"></textarea>
     </div>
-    <div class="form-group">
-      <label for="img">صورة</label>
+    <div class="form-group text-right">
+      <label for="img">صورة للخبر</label>
       <input type="file" class="form-control" (change)="uploadFile($event)"  >
+      <h1 *ngIf="complate" >تم التحميل</h1>
     </div>
-    <input type="submit" class="btn btn-block btn-info btn-sm">
+    <input type="submit"  class="btn btn-block btn-info btn-sm">
   </form>
 </div>
