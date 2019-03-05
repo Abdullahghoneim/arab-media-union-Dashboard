@@ -17,6 +17,9 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 // services 
 import { NewsService } from './services/News.service';
 import { EditeNewComponent } from './components/edite-new/edite-new.component';
+import { MessagesComponent } from './components/messages/messages.component';
+import { MessagesServices } from './services/Messages.service';
+import { MessagesDetailsComponent } from './components/messages/messages-details/messages-details.component';
 
 const firebase = {
   apiKey: "AIzaSyAq2oCiGtSBNqi6RlPfO1YqFd0kd9CHs-4",
@@ -36,6 +39,8 @@ const firebase = {
     NewsDetailsComponent,
     AddNewComponent,
     EditeNewComponent,
+    MessagesComponent,
+    MessagesDetailsComponent,
     
   ],
   imports: [
@@ -46,7 +51,7 @@ const firebase = {
     FormsModule,
     AngularFireStorageModule
   ],
-  providers: [NewsService],
+  providers: [NewsService, MessagesServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

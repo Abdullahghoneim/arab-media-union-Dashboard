@@ -1,0 +1,33 @@
+<div dir="rtl" class="mt-5">
+  <div class="row mb-4">
+    <div class="col">
+      <button class="btn btn-danger float-right" (click)="deleteMessage()"> حدف الرسالة <i class="fas fa-trash"></i></button>
+    </div>
+    <div class="col">
+      <a href="#" class="btn btn-link " routerLink="/messages"> الرجوع الي الرسائل <i class="fas fa-arrow-circle-left"></i></a>
+    </div>
+  </div>
+  <div class="card ">
+    <div class="card-header text-right">
+      <h4 class="">تفاصيل الرسالة</h4>
+    </div>
+    <div class="card-body text-right">
+      <h5>
+        <span class="text-muted" style="display: inline-block"> المرسل : </span>{{ message.name }}
+      </h5>
+      <h6 class="float-left">
+        <span class="text-muted"> رقم الهاتف : {{ message.phone }} </span>
+      </h6>
+      <hr />
+      <h5 class="m-4">
+        <span class="text-muted"> البريد الالكنروني : </span>{{ message.email }} </h5>
+      <hr />
+      <h4 class=" m-4">
+        <span class="text-muted">نص الرسالة : </span>
+        <span>{{ message.message }} </span>
+      </h4>
+      <hr />
+      <p></p>
+    </div>
+  </div>
+</div>
