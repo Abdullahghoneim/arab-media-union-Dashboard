@@ -15,6 +15,7 @@ import {AngularFireDatabaseModule} from '@angular/fire/database';
 
 // services 
 import { NewsService } from './services/News.service';
+import { EditeNewComponent } from './components/edite-new/edite-new.component';
 
 const firebase = {
   apiKey: "AIzaSyAq2oCiGtSBNqi6RlPfO1YqFd0kd9CHs-4",
@@ -33,6 +34,7 @@ const firebase = {
     HomeComponent,
     NewsDetailsComponent,
     AddNewComponent,
+    EditeNewComponent,
     
   ],
   imports: [

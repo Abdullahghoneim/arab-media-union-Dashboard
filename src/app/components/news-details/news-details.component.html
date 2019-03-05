@@ -3,7 +3,9 @@
     <div class="col">
         <div class="btn-group float-right" role="group" aria-label="Basic example">
             <button type="button" class="btn btn-danger" (click)="deleteNew()" > <i class="fas fa-trash"></i> حذف الخبر</button>
-            <button type="button" class="btn btn-light"> <i class="fas fa-pen"></i> تعديل</button>
+            <button type="button" class="btn btn-light"
+              [routerLink]="[ '/edite-new', id ]">
+            <i class="fas fa-pen"></i> تعديل</button>
           </div>
     </div>
     <div class="col">

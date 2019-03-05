@@ -18,12 +18,14 @@ export class NewsDetailsComponent implements OnInit {
     this.id = this.router.snapshot.params['id']; 
     this.newsService.getNew(this.id).subscribe(indeviduleNew => {
       this.new = indeviduleNew; 
-      console.log(this.new)
     } )
   }
   deleteNew()
   {
-    this.newsService.deleteNew(this.id)  
-    this.route.navigate(['/'])
+    let c = confirm('هل متاكد من خذف الخبر ؟')
+    if (c == true) {
+      this.newsService.deleteNew(this.id)  
+      this.route.navigate(['/'])      
+    }
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsService } from 'src/app/services/News.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-new',
@@ -13,7 +14,7 @@ export class AddNewComponent implements OnInit {
     src : ''
   }
 
-  constructor(private newsService:NewsService) { }
+  constructor(private newsService:NewsService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -22,7 +23,6 @@ export class AddNewComponent implements OnInit {
     this.new.title = ''; 
     this.new.body = ''; 
     this.new.src = ''; 
-    
+    this.router.navigate(['/'])
   }
-
 }
