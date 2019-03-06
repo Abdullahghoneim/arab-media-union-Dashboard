@@ -8,7 +8,7 @@
     </div>
   </div>
   <div class="mt-3">
-      <form #f="ngForm" (ngSubmit)="updateNew(f.value)" >
+      <form #f="ngForm" (ngSubmit)="updateNew()" >
         <div class="form-group text-right ">
           <label for="title">عنوان الخبر</label>
           <input type="text" class="form-control" required id="title" name="title" [(ngModel)]="new.title">
@@ -17,10 +17,6 @@
             <label for="body">تفاصيل الخبر</label>
             <textarea name="body" required id="body" placeholder="تفاصيل الخبر" class="form-control" [(ngModel)]="new.body" cols="30" rows="10"></textarea>
         </div>
-        <!-- <div class="form-group text-right">
-          <label for="src">مصدر الصورة</label>
-          <input  type="text" class="form-control" id="src" name="src" [(ngModel)]="new.src">
-        </div> -->
         <div class="form-group text-right">
           <label for="img">صورة للخبر</label>
           <input type="file" class="form-control" (change)="uploadFile($event)"  >
